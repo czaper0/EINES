@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Docker",
+    "\\DockerCompose",
+    "\\ZsutPw.Sdn.ControlSvc",
+    "\\ZsutPw.Sdn.ControlSvc\\Controllers",
+    "\\ZsutPw.Sdn.ControlSvc\\Logic",
+    "\\ZsutPw.Sdn.ControlSvc\\Logic\\Onos",
+    "\\ZsutPw.Sdn.ControlSvc\\Model",
+    "\\ZsutPw.Sdn.ControlSvc\\Services",
+    "\\ZsutPw.Sdn.ControlSvc\\Utilities"
+  ],
+  "SelectedNode": "\\ZsutPw.Sdn.ControlSvc.sln",
+  "PreviewInSolutionExplorer": false
+}

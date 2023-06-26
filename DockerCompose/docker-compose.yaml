@@ -1,0 +1,19 @@
+version: "3.9"
+
+networks:
+  int_network:
+
+services:
+  controlsvc:
+    image: atomaszewski/application:zsutpw-sdn-controlsvc_linux
+    ports:
+      - published: 5000
+        target: 80
+      - published: 5001
+        target: 443
+    networks:
+      - int_network
+    extra_hosts:
+      - mininet:172.27.249.87
+    deploy:
+      replicas: 1

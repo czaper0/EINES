@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: controlsvc
+  labels:
+    app: controlsvc
+    tier: network-mgmnt
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: controlsvc
+  template:
+    metadata:
+      labels:
+        app: controlsvc
+        tier: network-mgmnt
+    spec:
+      containers:
+      - name: controlsvc
+        image: atomaszewski/application:zsutpw-sdn-controlsvc_linux
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: docker-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: controlsvc
+  labels:
+    app: controlsvc
+    tier: network-mgmnt
+spec:
+  selector:
+    app: controlsvc
+  type: NodePort
+  ports:
+  - port: 80
+    nodePort: 30080
